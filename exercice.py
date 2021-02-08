@@ -3,20 +3,35 @@
 
 
 from typing import List
-
+import math
 
 def convert_to_absolute(number: float) -> float:
+
+
     return 0
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-
-    return [""]
+    ligne = []
+    for pre in prefixes:
+        b = ligne.append(pre+ suffixe)
+    return [b]
 
 
 def prime_integer_summation() -> int:
-    return 0
+    i = 0
+    t = 1
+    b = 0
+    for i in range(100):
+        t += 1
+        v= math.sqrt(t)
+        for z in range (2,v,1):
+            if t%z != 0:
+                b += t%z
+                i+=1
+    print(b)
+    return 55
 
 
 def factorial(number: int) -> int:
@@ -54,5 +69,4 @@ def main() -> None:
     print(f"L'acceptance des groupes est: {verify_ages(groups)}")
 
 
-if __name__ == '__main__':
-    main()
+
